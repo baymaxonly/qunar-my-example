@@ -3,12 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>qunar-my-example</groupId>
+        <artifactId>father-pom</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
     <groupId>qunar-my-example</groupId>
     <artifactId>common</artifactId>
     <!-- pom,jar,maven-plugin,ejb,war,ear,rar,par -->
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
 
     <dependencies>
@@ -25,11 +35,25 @@
     </dependencies>
 
 
+
     <build>
         <directory>${basedir}/target</directory>
         <finalName>${artifactId}-${version}</finalName>
         <plugins>
-            <plugin></plugin>
+
+            <!--项目打成jar包 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+
+
+
         </plugins>
     </build>
 

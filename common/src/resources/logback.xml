@@ -1,0 +1,20 @@
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <contextName>myAppName</contextName>
+    <!-- 其他配置省略-->
+
+    <!-- 打印方式 ，这里选择打印控制台 -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%X{traceId}][%d{yyyy/MM/dd HH:mm:ss.SSS}][%p][%logger{0}:%L] %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 打印等级 TRACE, DEBUG, INFO, WARN, ERROR, ALL 和 OFF -->
+    <root level="INFO">
+        <appender-ref ref="console" />
+    </root>
+
+    <!-- 针对单个主题打印日志级别 -->
+    <logger name="qunar.com.hotel" level="DEBUG" />
+
+</configuration>
