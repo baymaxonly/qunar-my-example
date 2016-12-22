@@ -22,20 +22,9 @@
 
 
     <dependencies>
-        <!-- log日志模块-->
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-        </dependency>
-        <!-- log日志模块-->
+
+
     </dependencies>
-
-
-
     <build>
         <directory>${basedir}/target</directory>
         <finalName>${artifactId}-${version}</finalName>
