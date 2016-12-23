@@ -22,5 +22,4 @@ public class TestLogBackExample {
         logger.error("logger level error {}", printContent);
     }
 
-
 }

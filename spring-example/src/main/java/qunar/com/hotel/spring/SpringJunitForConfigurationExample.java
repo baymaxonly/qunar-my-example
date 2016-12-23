@@ -9,6 +9,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * Created by shixian.zhen on 2016/12/21.
+ * spring 跟JUnit结合的例子
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
